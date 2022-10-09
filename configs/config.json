@@ -1,0 +1,34 @@
+{
+    "members_data": {
+        "John": {
+            "level":"0",
+            "poins":100
+        },
+        "Aurora": {
+            "level":"1",
+            "poins":0
+        },
+        "Sunday": {
+            "level":"2",
+            "poins":0
+        },
+        "Nic": {
+            "level":"3",
+            "poins":0
+        },
+        "Jay": {
+            "level":"5",
+            "poins":0
+        }
+    },
+    "level_bonus_map": {
+        "0": "1",
+        "1": "0.95",
+        "2": "0.9",
+        "3": "0.85"
+    },
+    "points_coins_ratio": {
+        "points_ratio":5.5,
+        "coins_ratio":1
+    }
+}
