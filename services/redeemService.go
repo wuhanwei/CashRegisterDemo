@@ -3,6 +3,7 @@ package services
 import (
 	"CashRegisterDemo/dtos"
 	"fmt"
+	"math"
 	"strconv"
 )
 
@@ -55,7 +56,7 @@ func GetRedeemPrice(data *dtos.StructCashRegister) (*dtos.StructResponseOrderDat
 			return &response_order, err, "4006"
 		}
 		if sale < 1 {
-			final_order_price = final_order_price * sale
+			final_order_price = math.Round(final_order_price*sale*100) / 100
 		}
 	}
 
@@ -80,16 +81,16 @@ func getRedeemPoints(order_price float64, member *dtos.StructMember) (float64, f
 	}
 
 	//本次折抵點數
-	discount_points = order_price / points_ratio
+	discount_points = math.Round(order_price/points_ratio*100) / 100
 	if discount_points > float64(member.Field_points) {
 		discount_points = float64(member.Field_points)
 	}
 
 	//本次折抵金額
-	discount_coins = discount_points * coins_ratio
+	discount_coins = math.Round(discount_points*coins_ratio*100) / 100
 	if discount_coins > order_price {
 		discount_coins = order_price
-		discount_points = discount_coins / coins_ratio
+		discount_points = math.Round(discount_coins/coins_ratio*100) / 100
 	}
 
 	return discount_points, discount_coins, nil
