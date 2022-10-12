@@ -6,7 +6,7 @@
         },
         "Aurora": {
             "level":"1",
-            "poins":0
+            "poins":100
         },
         "Sunday": {
             "level":"2",
@@ -14,10 +14,10 @@
         },
         "Nic": {
             "level":"3",
-            "poins":0
+            "poins":100
         },
         "Jay": {
-            "level":"5",
+            "level":"3",
             "poins":0
         }
     },
@@ -28,7 +28,7 @@
         "3": "0.85"
     },
     "points_coins_ratio": {
-        "points_ratio":5.5,
+        "points_ratio":1,
         "coins_ratio":1
     }
 }
